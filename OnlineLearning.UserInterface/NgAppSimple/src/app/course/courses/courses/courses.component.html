@@ -1,0 +1,13 @@
+<h2>Course List</h2>
+<button (click)="register()">Register</button>
+<button (click)="login()">Login</button>
+<button *ngIf="isloggedin" (click)="logout()">Logout</button>
+<ul>
+  <li *ngFor="let course of courses">
+    {{ course.title }} - {{ course.description }} hours
+    <button (click)="deleteCourse(course.courseId)">Delete</button>
+    <a [routerLink]="['/course-edit', course.courseId]">Edit</a>
+    <a [routerLink]="['/course-view', course.courseId]">View Course</a>
+  </li>
+</ul>
+<a routerLink="/course-create">Add New Course</a>

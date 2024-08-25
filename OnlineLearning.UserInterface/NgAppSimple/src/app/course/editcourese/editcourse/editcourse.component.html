@@ -1,0 +1,47 @@
+<!-- <h2>Create Course</h2>
+<form #form="ngForm" (ngSubmit)="saveCourse(form)">
+  <div>
+    <label for="title">Title:</label>
+    <input id="title" [(ngModel)]="course.title" name="title" required />
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <textarea id="description" [(ngModel)]="course.description" name="description" required></textarea>
+  </div>
+  
+  <button type="submit">Save</button>
+</form>
+ -->
+
+ <div class="container mt-5 mb-5 d-flex justify-content-center">
+    <div class="card px-1 py-4">
+        <div class="card-body">
+            <!-- <h6 class="card-title mb-3">This appointment is for</h6>
+            <div class="d-flex flex-row"> <label class="radio mr-1"> <input type="radio" name="add" value="anz" checked> <span> <i class="fa fa-user"></i> Anz CMK </span> </label> <label class="radio"> <input type="radio" name="add" value="add"> <span> <i class="fa fa-plus-circle"></i> Add </span> </label> </div>
+            <h6 class="information mt-4">Please provide following information about Anz CMK</h6> -->
+            <form #form="ngForm" (ngSubmit)="saveCourse()">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <!-- <label for="name">Name</label> --> <input value="course.title" class="form-control" name = "title" type="text" placeholder="Course Title"  [(ngModel)]="course.title"> </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <!-- <label for="name">Name</label> --> <input class="form-control" name="description" type="text" placeholder="Course Description" [(ngModel)]="course.description"> </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <!-- <label for="name">Name</label> --> <input class="form-control" name="price" type="number" placeholder="Course Price" [(ngModel)]="course.price"> </div>
+                    </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block confirm-button">Edit Course</button>
+        </form>
+        </div>
+    </div>
+</div>
+
